@@ -281,9 +281,14 @@ main {
   margin-right: 1em;
 }
 
-.projects__grid {
+/* Common styles for both projects and experience sections */
+.grid-container {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+/* Styles for the projects section */
+.projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
   grid-gap: 2em;
@@ -322,6 +327,60 @@ main {
 .project .link--icon {
   margin-left: 0.5em;
 }
+
+/* Styles for the experience section */
+.experience__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  grid-gap: 2em;
+}
+
+.job {
+  padding: 2em;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+}
+
+.job:hover {
+  transform: translateY(-7px);
+}
+
+.job__description {
+  margin-top: 1em;
+}
+
+.job__responsibilities {
+  list-style-type: none;
+  padding: 0;
+  max-height: 0px; /* Adjust the max height based on your design */
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.job__responsibilities.expanded {
+  max-height: 500px; /* Adjust the expanded height based on your design */
+}
+
+.job__responsibility {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--clr-fg-alt);
+}
+
+.show-more-btn {
+  cursor: pointer;
+  color: rgb(223, 223, 255); /* Adjust the color based on your design */
+  display: block;
+  margin-top: 1em;
+}
+
+.job .link--icon {
+  margin-left: 0.5em;
+}
+
 
 .skills__list {
   max-width: 450px;

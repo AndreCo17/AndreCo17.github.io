@@ -60,4 +60,10 @@ const scrollUp = () => {
 	}
 }
 
+function toggleResponsibilities(btn) {
+	var responsibilitiesList = btn.previousElementSibling;
+	responsibilitiesList.classList.toggle("expanded");
+	btn.textContent = responsibilitiesList.classList.contains("expanded") ? "Show Less" : "Show More";
+}
+
 document.addEventListener('scroll', scrollUp)
